@@ -1,7 +1,7 @@
 describe('movies catalogue', function() {
 
     beforeEach(function () {
-        module("movies");
+        module("ntvApp");
     });
 
     it('should return all the movies', inject(function(moviesCatalogue) {

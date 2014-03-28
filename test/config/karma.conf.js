@@ -8,6 +8,7 @@ module.exports = function(config) {
         files : [
             'js/lib/angular/angular.js',
             'js/lib/angular/angular-resource.js',
+            'js/lib/jquery/jquery-1.9.0.min.js',
 
             'js/app.js',
             'js/**/*.js',

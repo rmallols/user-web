@@ -1,16 +1,16 @@
 (function() {
-    app.directive('navigation',['navigationItems', function (navigationItems) {
+    app.directive('navigationBar',['navigationItems', function (navigationItems) {
         'use strict';
         return  {
             replace: true,
             transclude: false,
             restrict: 'A',
-            //scope: true,
-            template: '<div id="navigationBar" class="clearfix">' +
+            scope: true,
+            template: '<div id="navigationBar">' +
                         '<div class="navigationItem" ng-repeat="navigationItem in navigationItems">' +
-                            '<a ng-href="navigationItem.link">{{navigationItem.text}}</a>' +
+                            '<a class="navigationLink" href="{{navigationItem.link}}">{{navigationItem.text}}</a>' +
                         '</div>' +
-                        '<div><input type="text" /></div>' +
+                        '<div search-box class="searchBox"></div>' +
                       '</div>',
             link: function (scope) {
                 scope.navigationItems = navigationItems;
