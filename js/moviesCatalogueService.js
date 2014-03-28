@@ -1,12 +1,11 @@
-angular.module('movies')
-    .service('moviesCatalogue',  function (catalogue){
+    app.service('moviesCatalogue',  function (catalogue){
 
         this.all = function() {
             return catalogue;
         }
-    })
+    });
 
-    .constant('catalogue',[
+    app.constant('catalogue',[
         {
             "title": "Pirates of the Caribbean",
             "slug": "pirates-caribbean",

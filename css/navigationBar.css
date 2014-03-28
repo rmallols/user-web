@@ -1,0 +1,21 @@
+#navigationBar {
+    width:990px;
+    height: 45px;
+    margin:0 auto;
+    background: transparent url('../img/navigationBarBg.png') repeat-x;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#navigationBar > .navigationItem {
+    float: left;
+    color: #fff;
+}
+
+#navigationBar > .navigationItem > a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+}

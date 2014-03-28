@@ -1,1 +1,1 @@
-angular.module('movies', []);
+var app = angular.module('ntvApp', []);
