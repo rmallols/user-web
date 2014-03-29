@@ -3,7 +3,7 @@ user-web
 The current project aims to be an example about how to get rid of some functional specification within an AngularJs-based stack.
 
 It covers the following features:
-<a href="https://github.com/rmallols/user-web/issues/1" target="_blank">Create a 'Navigation bar' component</a></br></br>
+<a href="https://github.com/rmallols/user-web/issues/1" target="_blank">Create a 'Navigation bar' component</a></br>,
 <a href="https://github.com/rmallols/user-web/issues/2" target="_blank">Create a 'Search with Auto-suggest' mechanism</a></br>
 
 Please note some of the requirements specified above could look strange from both end user and technical perspectives.
