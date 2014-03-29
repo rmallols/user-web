@@ -1,11 +1,18 @@
-    app.service('moviesCatalogue',  function (catalogue){
+(function() {
+    app.service('moviesCatalogue', ['catalogue', function (catalogue) {
+        'use strict';
 
-        this.all = function() {
+        /**
+         * Retrieves all the available movies from the catalogue
+         *
+         * @returns {Array} The total amount of movies that are available in the catalogue
+         */
+        this.all = function () {
             return catalogue;
         }
-    });
+    }]);
 
-    app.constant('catalogue',[
+    app.constant('catalogue', [
         {
             "title": "Pirates of the Caribbean",
             "slug": "pirates-caribbean",
@@ -72,3 +79,4 @@
             "thumbnail": "..."
         }
     ]);
+})();
