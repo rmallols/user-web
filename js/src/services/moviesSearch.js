@@ -2,6 +2,12 @@
     app.service('moviesSearch', ['$q', 'catalogue', function ($q, catalogue) {
         'use strict';
 
+        /**
+         * Simulates a query to retrieve movies
+         *
+         * @param {string}      filter  The text that will determine the movies to retrieve
+         * @returns {promise}           A deferred result with the movies that fit the given filter
+         */
         function execute(filter) {
             var deferred = $q.defer();
             try {
