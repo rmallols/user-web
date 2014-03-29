@@ -37,6 +37,9 @@
                 };
 
                 scope.updateView = function(movie) {
+                    //WARNING!!!! This is an antipattern because it couples the current directive with the index.html file
+                    //Clean solutions (ng-view, ng-include...) cannot be applied without any real server.
+                    //Please take a look to #2 for more details about this.
                     scope.$root.detailView = '<div><h1>' + movie.title + '</h1></div>'
                 }
 
