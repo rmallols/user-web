@@ -10,7 +10,7 @@
                         '<div class="navigationItem" ng-repeat="navigationItem in navigationItems">' +
                             '<a class="navigationLink" href="{{navigationItem.link}}">{{navigationItem.text}}</a>' +
                         '</div>' +
-                        //'<div search-box class="searchBox"></div>' +
+                        '<div search-box class="searchBox"></div>' +
                       '</div>',
             link: function link(scope) {
 
