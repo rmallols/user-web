@@ -1,16 +1,14 @@
 describe('navigation bar directive', function() {
 
-    var $compile, $scope,
+    var $scope,
         navigationBarElm, navigationBarItemElms, navigationBarLinkElms,
         forEach = angular.forEach;
     beforeEach(function () {
         module("ntvApp");
     });
 
-    //Angular strips the underscores when injecting
-    beforeEach(inject(function(_$compile_, _$rootScope_) {
-        $compile = _$compile_;
-        $scope = _$rootScope_.$new();
+    beforeEach(inject(function($compile, $rootScope) {
+        $scope = $rootScope.$new();
         navigationBarElm = $compile("<div navigation-bar></div>")($scope);
         $scope.$digest();
         navigationBarItemElms = $('.navigationItem', navigationBarElm);
@@ -33,10 +31,11 @@ describe('navigation bar directive', function() {
     }));
 
     it('should define the proper link and text for each navigation item', inject(function(navigationItems) {
-
         forEach(navigationBarLinkElms, function(navigationBarLinkElm, index) {
-            expect($(navigationBarLinkElm).attr('href')).toBe(navigationItems[index].link);
-            expect($(navigationBarLinkElm).text()).toBe(navigationItems[index].text);
+            if(typeof navigationItems[index] == 'object') {
+                expect($(navigationBarLinkElm).attr('href')).toBe(navigationItems[index].link);
+                expect($(navigationBarLinkElm).text()).toBe(navigationItems[index].text);
+            }
         })
     }));
 });

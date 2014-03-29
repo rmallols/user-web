@@ -1,0 +1,81 @@
+.searchBox {
+    position: relative;
+}
+
+.searchBox > input {
+    height: 30px;
+    width: 220px;
+    background: #fff url('../img/searchIcon.png') no-repeat 5px 5px;
+    border-radius: 5px;
+    padding-left: 26px;
+}
+
+.searchBox > .resultsPanel {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 400px;
+    background-color: #fff;
+    box-shadow: 0px 0px 2px 2px rgba(50, 50, 50, 0.25);
+}
+
+.searchBox > .resultsPanel > .viewFilter,
+.searchBox > .resultsPanel > .moviesPreview {
+    min-height: 65px;
+}
+
+.searchBox > .resultsPanel > .viewFilter {
+    float: left;
+    padding: 15px;
+    width: 30%;
+    box-sizing: border-box;
+    text-align: right;
+}
+
+.searchBox .viewFilter > h3 {
+    margin-bottom: 5px;
+}
+
+.searchBox .moviesPreview > .noResults {
+    font-style: italic;
+    padding: 15px;
+}
+
+.searchBox > .resultsPanel > .moviesPreview {
+    float: right;
+    border-left: 1px solid rgba(50, 50, 50, 0.25);
+    width: 70%;
+    box-sizing: border-box;
+}
+
+.searchBox .moviesPreview > .moviePreview {
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.searchBox .moviesPreview > .moviePreview:hover {
+    background-color: #5c0e42;
+    color: #fff;
+}
+
+.searchBox .moviePreview > * {
+    display: block;
+    float: left;
+}
+
+.searchBox .moviePreview > img {
+    height: 24px;
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid rgba(50, 50, 50, 0.25);
+}
+
+.searchBox .moviePreview:hover > img {
+    border: 1px solid #fff;
+}
