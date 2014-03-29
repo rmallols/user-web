@@ -1,6 +1,7 @@
 user-web
 ========
 The current project aims to be an example about how to get rid of some functional specification within an AngularJs-based stack.
+This demo has been thought to perform just for Chrome. Giving support to other browsers would be trivial (but not implemented at this moment).
 
 It covers the following features:
 <a href="https://github.com/rmallols/user-web/issues/1" target="_blank">Create a 'Navigation bar' component</a></br>,
